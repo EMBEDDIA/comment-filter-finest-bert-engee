@@ -49,10 +49,10 @@ class ModelLoad():
 
         # Load a trained model that you have fine-tuned
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self.bert_model = 'bert-base-multilingual-uncased' #EMBEDDIA Model
+        self.bert_model = 'EMBEDDIA/finest-bert/' #EMBEDDIA Model
 
         DIRECTORIES = {
-            'ml_hate_speech_path': os.path.join(self.ROOT_FOLDER, 'models/mbert-multi')
+            'ml_hate_speech_path': os.path.join(self.ROOT_FOLDER, 'models/finest-bert_engee')
         }
         self.model_file = os.path.join(DIRECTORIES['ml_hate_speech_path'], 'pytorch_model.bin')
 
